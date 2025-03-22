@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MedAI - AI-Powered Medical Report Summarization
+
+MedAI is a SaaS platform that uses fine-tuned machine learning AI models to quickly summarize and analyze medical reports, helping healthcare professionals save time and improve patient care.
+
+## Features
+
+- **Smart Summarization**: Our fine-tuned AI model understands medical terminology and context to provide accurate summaries.
+- **Interactive Q&A**: Ask follow-up questions about any report to get instant clarification on specific details.
+- **Multiple Format Support**: Works with PDFs, DOCXs, and even scanned documents through advanced OCR technology.
+- **HIPAA Compliant**: End-to-end encryption and secure infrastructure designed for healthcare data.
+- **Team Collaboration**: Share insights with colleagues while maintaining access controls and audit logs.
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, TailwindCSS
+- **UI Components**: Custom components with responsive design
+- **Styling**: TailwindCSS for utility-first styling
+- **Icons**: Lucide React for beautiful, consistent icons
 
 ## Getting Started
 
@@ -16,9 +33,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` - Next.js app directory
+  - `components/` - Reusable UI components
+  - `page.tsx` - Main landing page
+  - `layout.tsx` - Root layout with metadata
+  - `globals.css` - Global styles and Tailwind directives
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For more information about MedAI, please contact info@medai.com.
 
 ## Learn More
 
