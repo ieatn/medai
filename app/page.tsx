@@ -1,10 +1,15 @@
 import { ArrowRight, BrainCircuit, FileText, MessageSquareText, ShieldCheck, Sparkles, UserRound } from "lucide-react";
 import Navbar from "./components/Navbar";
+import Chatbot from "./components/Chatbot";
+import ChatbotButton from "./components/ChatbotButton";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
+      
+      {/* Chatbot */}
+      <Chatbot />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-50 to-indigo-100">
@@ -112,6 +117,132 @@ export default function Home() {
                 <p className="text-slate-700">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Chatbot Demo Section */}
+      <section id="chatbot" className="py-16 bg-gradient-to-br from-indigo-900 to-indigo-800 text-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Interactive AI <span className="text-emerald-400">Medical Assistant</span>
+            </h2>
+            <p className="mt-4 text-lg text-indigo-200 max-w-2xl mx-auto">
+              Our AI chatbot understands medical terminology and can interpret complex reports in seconds.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="bg-indigo-800/50 p-5 rounded-xl border border-indigo-700">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <MessageSquareText className="text-emerald-400" size={20} />
+                  Natural Conversations
+                </h3>
+                <p className="text-indigo-200">
+                  Ask follow-up questions, request clarification, or dive deeper into specific aspects of a medical report.
+                </p>
+              </div>
+              
+              <div className="bg-indigo-800/50 p-5 rounded-xl border border-indigo-700">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <FileText className="text-emerald-400" size={20} />
+                  Upload Any Report
+                </h3>
+                <p className="text-indigo-200">
+                  Simply upload your medical reports in PDF, DOCX, or image format and get instant insights.
+                </p>
+              </div>
+              
+              <div className="bg-indigo-800/50 p-5 rounded-xl border border-indigo-700">
+                <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <BrainCircuit className="text-emerald-400" size={20} />
+                  Contextual Understanding
+                </h3>
+                <p className="text-indigo-200">
+                  Our AI remembers your conversation context and builds a comprehensive understanding of your medical history.
+                </p>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                <div className="bg-indigo-600 text-white p-4 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 4.5V6.5M18.5 8.5C18.5 6.01472 16.4853 4 14 4C12.1259 4 10.5087 5.08554 9.76455 6.66793M5.5 8.5C5.5 6.01472 7.51472 4 10 4C10.1685 4 10.3344 4.00858 10.4976 4.02544M18.5 15.5C18.5 17.9853 16.4853 20 14 20H10C7.51472 20 5.5 17.9853 5.5 15.5C5.5 13.0147 7.51472 11 10 11H14C16.4853 11 18.5 13.0147 18.5 15.5ZM14 11V20M10 11V20M18.5 11V15.5M5.5 11V15.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">MedAI Assistant</h3>
+                    <p className="text-xs text-indigo-100">Medical report expert</p>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-slate-50 max-h-[380px] overflow-y-auto space-y-4">
+                  <div className="flex justify-start">
+                    <div className="max-w-[80%] bg-white p-3 rounded-lg rounded-tl-none border border-slate-200">
+                      <p>Hello! I'm MedAI, your medical report assistant. How can I help you today?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-end">
+                    <div className="max-w-[80%] bg-indigo-600 text-white p-3 rounded-lg rounded-tr-none">
+                      <p>I just got my MRI results. Can you help me understand what "mild cortical atrophy" means?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-start">
+                    <div className="max-w-[80%] bg-white p-3 rounded-lg rounded-tl-none border border-slate-200">
+                      <p>"Mild cortical atrophy" refers to a slight shrinkage of the cerebral cortex, the outer layer of the brain. This is often an age-related finding and can be normal in older adults. It's characterized by widening of the brain's sulci (grooves) and sometimes enlargement of the ventricles. Would you like me to explain the potential clinical significance?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-end">
+                    <div className="max-w-[80%] bg-indigo-600 text-white p-3 rounded-lg rounded-tr-none">
+                      <p>Yes, should I be concerned about this finding?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-start">
+                    <div className="max-w-[80%] bg-white p-3 rounded-lg rounded-tl-none border border-slate-200">
+                      <p>Mild cortical atrophy by itself is generally not a cause for immediate concern, especially if it's the only finding. It's commonly seen in normal aging. However, the clinical significance depends on several factors including your age, symptoms, and other findings in the report. I'd recommend discussing this with your healthcare provider, who can put this finding in the context of your overall health picture.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-3 border-t border-slate-200 bg-white">
+                  <div className="flex gap-2">
+                    <button className="p-2 text-slate-500 rounded-lg bg-slate-100">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.44 11.05L12.25 2.42C12.09 2.27 11.89 2.18 11.67 2.18C11.46 2.18 11.26 2.27 11.1 2.42L1.91 11.05C1.56 11.36 1.39 11.86 1.47 12.34C1.54 12.82 1.86 13.22 2.3 13.39L4.3 14.13V21C4.3 21.55 4.75 22 5.3 22H18.04C18.59 22 19.04 21.55 19.04 21V14.13L21.04 13.39C21.48 13.22 21.8 12.82 21.87 12.34C21.95 11.86 21.78 11.36 21.44 11.05ZM12 15.93C10.76 15.93 9.75 14.92 9.75 13.68C9.75 12.43 10.76 11.43 12 11.43C13.24 11.43 14.25 12.43 14.25 13.68C14.25 14.92 13.24 15.93 12 15.93Z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      placeholder="Ask about a medical report..."
+                      className="flex-1 py-2 px-3 rounded-lg border border-slate-300 focus:outline-none"
+                    />
+                    <button className="p-2 text-white bg-indigo-600 rounded-lg">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-emerald-400 opacity-20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-indigo-400 opacity-20 rounded-full blur-3xl"></div>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <ChatbotButton />
+            <p className="mt-2 text-indigo-200 text-sm">No sign-up required to explore the demo</p>
           </div>
         </div>
       </section>

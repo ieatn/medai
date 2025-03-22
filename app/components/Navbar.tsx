@@ -34,6 +34,9 @@ export default function Navbar() {
           <Link href="#features" className="text-slate-600 hover:text-indigo-600 font-medium">
             Features
           </Link>
+          <Link href="#chatbot" className="text-slate-600 hover:text-indigo-600 font-medium">
+            AI Assistant
+          </Link>
           <Link href="#testimonials" className="text-slate-600 hover:text-indigo-600 font-medium">
             Testimonials
           </Link>
@@ -74,6 +77,13 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
+            </Link>
+            <Link 
+              href="#chatbot" 
+              className="block py-2 text-slate-600 hover:text-indigo-600 font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              AI Assistant
             </Link>
             <Link 
               href="#testimonials" 

@@ -34,4 +34,61 @@
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Chatbot animations */
+  .chat-message-in {
+    animation: slideIn 0.3s ease forwards;
+  }
+  
+  .chat-message-out {
+    animation: slideUp 0.3s ease forwards;
+  }
+  
+  .chat-bubble-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .chat-fade-in {
+    animation: fadeIn 0.3s ease forwards;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
